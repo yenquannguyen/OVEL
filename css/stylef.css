@@ -1,0 +1,179 @@
+body{
+  background-color: black;
+}
+.footer{
+  z-index: 1000;
+  font-size: 11px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+.footerContainerLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 40px;
+  height: 100px;
+  width: 300px;
+  overflow: hidden;
+/*   border: 1px solid #000; */
+  cursor:pointer;
+   float:left;
+   
+}
+.leftCenter{
+  margin-top: 0px;
+  transition: all .4s ease-in-out;
+}
+
+.leftCenter a{
+  margin:10px;
+}
+
+.leftBottom{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: all .4s ease-in-out;
+}
+
+.footerContainerLeft:hover .leftCenter {
+  margin-top: 10px;
+  margin-left:0px;
+  transition: all .3s ease-in-out;
+}
+
+.footerContainerLeft:hover .leftCenter a{
+  margin-left:0px;
+  transition: all .3s ease-in-out;
+}
+
+.footerContainerLeft:hover .leftCenter .fa-copyright{
+  visibility: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.footerContainerLeft:hover .leftBottom{
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  transform: translateY(0);
+}
+
+.footerContainerRight {
+  display: flex;
+/*       padding-left: 40px; */
+  height: 100px;
+  width: 300px;
+  overflow: hidden;
+/*   border: 1px solid #000; */
+  cursor:pointer;
+  float:right;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.RightCenter{
+  margin-top: 0px;
+  margin-left:50%;
+  transition: all .4s ease-in-out;
+}
+
+.RightCenter a{
+  margin:10px;
+}
+
+.RightBottom{
+  opacity: 0 ;
+  visibility: hidden;
+/*   transform: translateY(px); */
+  transition: all .4s ease-in-out;
+}
+
+
+.footerContainerRight:hover .RightCenter .fa-share-alt{
+  visibility: hidden;
+/*   transition: all .2s ease-in-out; */
+  opacity:0;
+}
+
+.footerContainerRight:hover .RightCenter{
+  margin-top: 10px;
+  margin-left:  65%;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all .3s ease-in-out;
+  
+}
+
+
+
+.footerContainerRight:hover .RightBottom{
+  opacity: 1;
+  visibility: visible;
+/*   margin-bottom: 20px; */
+/*       margin-left: 0px; */
+  transform: translateY(-65px);
+  transition: all 0.5s ease-in-out;
+}
+
+
+ul {
+/*   margin: 0;
+  padding: 0; */
+  display: flex;
+  position: absolute;
+/*   top: 50%; */
+/*   left: 50%; */
+/*   transform: translate(-50%, -50%) */
+/*  border: 1px solid #000; */
+/*   align-items:center; */
+}
+
+ul li {
+  list-style: none;
+  margin: 0 5px;
+} 
+
+ul li a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+/*   background: #333; */
+  border-radius: 50%;
+  color: #666;
+  font-size: 12px;
+  transition: 0.5s;
+  text-decoration:none;
+  opacity:0
+}
+
+ul li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+/*   background: #ffee10; */
+  transform: scale(0.9);
+/*   z-index: -1; */
+}
+
+ul li a:hover:before {
+  transform: scale(0.9);
+  
+/*   box-shadow: 0 0 15px #ffee10 */
+}
+
+ul li a:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow:0 0 5px #ffee10;
+  
+}
